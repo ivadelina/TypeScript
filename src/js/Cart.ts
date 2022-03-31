@@ -5,29 +5,28 @@ export default class Cart {
   add(item: Buyable): void {
       this._items.push(item);
   }
-  get items(): Buyable[] {
+  getItems(): Buyable[] {
       return [...this._items];
   }
   
-  sumPrice() {
-    let counter: number;
-    return [...this._items].forEach((el: Buyable) => {
-        return counter += el.price;
-    });
+  sumPrice(): number {
+    let counter: number = 0;
+    [...this._items].forEach((el: Buyable) => counter += el.price);
+    return counter;
    }
 
-   sumPriceDiscount(discount: number) {
-    let counter: number;
-    return [...this._items].forEach((el: Buyable) => {
-        return counter += el.price * discount;
-    });
+   sumPriceDiscount(discount: number): number {
+    let counter: number = 0;
+    [...this._items].forEach((el: Buyable) => (counter += el.price * (1 - (discount / 100))));
+    return counter;
    }
 
    deliteEl(id: number): void {
     [...this._items].forEach((el: Buyable) => {
         if(el.id === id) {
             let index: number = [...this._items].indexOf(el);
-            [...this._items].splice(index, 1)
+            [...this._items].splice(index, 1);
+            console.log([...this._items].splice(index, 1));
         }
     });
    }

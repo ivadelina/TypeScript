@@ -1,12 +1,11 @@
 {
-  "name": "ajs",
+  "name": "typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Build status](https://ci.appveyor.com/api/projects/status/2rfi659onwla5dtu?svg=true)](https://ci.appveyor.com/project/ivadelina/Math)",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
-    "builtsc": "tsc",
+    "build": "tsc",
     "watch": "tsc -w",
     "lint": "eslint .",
     "test": "jest",
@@ -22,6 +21,7 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.7",
     "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.1",
     "babel-jest": "^25.5.1",
     "babel-loader": "^8.2.3",
     "css-loader": "^3.5.3",
@@ -35,6 +35,8 @@
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
     "npm": "^8.5.4",
+    "ts-jest": "^27.1.4",
+    "ts-loader": "^9.2.8",
     "typescript": "^4.6.3",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
@@ -42,5 +44,13 @@
   },
   "dependencies": {
     "core-js": "^3.6.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivadelina/TypeScript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ivadelina/TypeScript/issues"
+  },
+  "homepage": "https://github.com/ivadelina/TypeScript#readme"
 }

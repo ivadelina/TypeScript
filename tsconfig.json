@@ -99,6 +99,6 @@
     "skipLibCheck": true,
     "sourceMap": true, 
     "outDir": "./dist", 
-    "rootDir": "./src"                                /* Skip type checking all .d.ts files. */
+    "rootDir": "./src",                                  /* Skip type checking all .d.ts files. */
   }
 }
