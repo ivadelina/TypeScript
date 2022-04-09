@@ -10,9 +10,9 @@ export default class Cart {
   }
   
   sumPrice(): number {
-    let counter: number = 0;
-    [...this._items].forEach((el: Buyable) => counter += el.price);
-    return counter;
+    return [...this._items].reduce((sum: number, current: Buyable) => {
+      return sum + current.price;
+    }, 0);
    }
 
    sumPriceDiscount(discount: number): number {
@@ -22,12 +22,6 @@ export default class Cart {
    }
 
    deliteEl(id: number): void {
-    [...this._items].forEach((el: Buyable) => {
-        if(el.id === id) {
-            let index: number = [...this._items].indexOf(el);
-            [...this._items].splice(index, 1);
-            console.log([...this._items].splice(index, 1));
-        }
-    });
+        this._items = this._items.filter((item: Buyable) => item.id !== id);
    }
 }

@@ -90,7 +90,7 @@ test('add book', () => {
   test('delete movie', () => {
     const cart = new Cart();
     const movie1 = new Movie(5, 'js', 'orelly', 10, 2000, 'Russia', 'Soon', 'Comedy', '1 hour')
-    const movie2 = new Movie(5, 'js', 'orelly', 10, 2000, 'Russia', 'Soon', 'Comedy', '1 hour')
+    const movie2 = new Movie(6, 'js', 'orelly', 10, 2000, 'Russia', 'Soon', 'Comedy', '1 hour')
     cart.add(movie1);
     cart.add(movie2);
     cart.deliteEl(6)
